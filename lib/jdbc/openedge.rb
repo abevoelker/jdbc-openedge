@@ -1,7 +1,7 @@
 module Jdbc
   module OpenEdge
     VERSION = "10.2B"
-    JARS = [ 'openedge.jar', 'pool.jar' ]
+    JARS = [ 'openedge.jar' ]
   end
 end
 
