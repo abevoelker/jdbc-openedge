@@ -52,7 +52,8 @@ though technically it shouldn't be required to load the DataDirect
 JDBC driver. This was a mistake on my part, which cannot be undone
 for the 10.2B gem version as RubyGems gem versions are permanent.
 A simple workaround if you don't have `pool.jar` would be to
-just use a blank file, e.g. `touch $CLASSPATH/pool.jar`.
+just use a blank file, e.g.
+`cd <somewhere in $CLASSPATH>; touch pool.jar`.
 
 Support for other versions can be done on an as-needed basis, if
 anyone else besides me ever uses this gem (pull requests accepted).
