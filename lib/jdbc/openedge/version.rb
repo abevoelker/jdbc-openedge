@@ -1,5 +1,5 @@
 module Jdbc
   module OpenEdge
-    VERSION = '10.2A'
+    VERSION = '11'
   end
 end
