@@ -1,25 +1,24 @@
 # -*- encoding: utf-8 -*-
+require File.expand_path("../lib/jdbc/openedge/version", __FILE__)
 
-$LOAD_PATH << File.expand_path('../lib', __FILE__)
-require 'jdbc/openedge'
-version = Jdbc::OpenEdge::VERSION
 Gem::Specification.new do |s|
-  s.name = %q{jdbc-openedge}
-  s.version = version
-
-  s.authors = ["Abe Voelker"]
-  s.date = %q{2012-05-05}
+  s.name        = 'jdbc-openedge'
+  s.version     = Jdbc::OpenEdge::VERSION
+  s.platform    = 'java'
+  s.authors     = ['Abe Voelker']
+  s.email       = 'abe@abevoelker.com'
+  s.date        = '2012-07-22'
+  s.homepage    = 'https://github.com/abevoelker/jdbc-openedge'
+  s.summary     = 'OpenEdge JDBC driver loader.'
   s.description = %q{Add relevant .jars to your Java $CLASSPATH, install this gem and require 'jdbc/openedge' within JRuby to load the driver.}
-  s.email = %q{abe@abevoelker.com}
 
-  s.files = [
-    "Rakefile", "README.md", "LICENSE",
-    *Dir["lib/**/*"].to_a
-  ]
+  s.required_rubygems_version = '>= 1.3.6'
+  s.rubyforge_project         = 'jdbc-openedge'
 
-  s.homepage = %q{https://github.com/abevoelker/jdbc-openedge}
-  s.rdoc_options = ["--main", "README.md"]
-  s.require_paths = ["lib"]
-  s.rubyforge_project = %q{jruby-openedge}
-  s.summary = %q{OpenEdge JDBC driver loader.}
+  s.add_development_dependency "bundler", ">= 1.0.0"
+
+  s.add_dependency "jdbc-openedge-internal", "~> 10.2.1.0"
+
+  s.files        = Dir["{lib}/**/*.rb", "LICENSE", "*.md"]
+  s.require_path = 'lib'
 end
