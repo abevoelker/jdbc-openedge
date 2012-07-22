@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "bundler", ">= 1.0.0"
 
-  s.add_dependency "jdbc-openedge-internal", "~> 11.0.0.0"
+  s.add_dependency "jdbc-openedge-internal", "~> 11.1.0.0"
 
   s.files        = Dir["{lib}/**/*.rb", "LICENSE", "*.md"]
   s.require_path = 'lib'
