@@ -11,7 +11,13 @@ installation directory under `$DLC/java`.
 
 ## Usage
 
-Add the necessary .jar files to your Java `$CLASSPATH`, and then use
+Add the gem to your Gemfile for whichever version corresponds to your
+OpenEdge version (note: **don't** use the spermy operator, `~>`):
+
+    gem "jdbc-openedge", "11.1"
+
+Then add the necessary .jar files to your Java `$CLASSPATH`, and in
+your code do
 
     require 'jdbc/openedge'
 
@@ -27,11 +33,37 @@ The following OE versions are currently supported:
     <th>.jar files required in <code>$CLASSPATH</code></th>
   </tr>
   <tr>
+    <td>11.1</td>
+    <td>
+      <ul>
+        <li><code>openedge.jar</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>
+      <ul>
+        <li><code>openedge.jar</code></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <td>10.2B</td>
     <td>
       <ul>
         <li><code>openedge.jar</code></li>
         <li><code>pool.jar</code><strong><sup>1</sup></strong></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>10.2A</td>
+    <td>
+      <ul>
+        <li><code>base.jar</code></li>
+        <li><code>openedge.jar</code></li>
+        <li><code>pool.jar</code></li>
       </ul>
     </td>
   </tr>
